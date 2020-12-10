@@ -1,33 +1,24 @@
 <?php
-//login_form_test.php
+//hours_test.php
 include_once 'includes/settings.php';
 require_once 'simpletest/autorun.php';
 require_once 'simpletest/web_tester.php';
 
-class LoginForm extends WebTestCase {
+class HoursForm extends WebTestCase {
 
-	  function testCorrectPassword() {
+	  function testCorrectData() {
 		$this->get(VIRTUAL_PATH . '/login.php');
 		$this->assertResponse(200);
 
-        $this->setField("name", "John");
-		$this->setField("password", "john123");
-		$this->clickSubmit("Login");
+        $this->setField("hours", "2");
+		$this->setField("rzte", "50");
+		$this->clickSubmit("Show Pay");
 
 		$this->assertResponse(200);
 		$this->assertText("Welcome, John");
 	}
 	
- 	 function testFailedPassword() {
-		$this->get(VIRTUAL_PATH . '/login.php');
-		$this->assertResponse(200);
 
-		$this->setField("name", "John");
-		$this->setField("password", "XYZXYZ");//incorrect password
-		$this->clickSubmit("Login");
-
-		$this->assertResponse(200);
-		$this->assertText("Login and/or password is incorrect");
 	}
 
 }
