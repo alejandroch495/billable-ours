@@ -19,6 +19,6 @@ class HoursForm extends WebTestCase {
 	}
 	
 
-	}
+	
 
 } ?php>
