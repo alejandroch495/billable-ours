@@ -10,8 +10,8 @@ class LearnMoreForm extends WebTestCase {
 		$this->get(VIRTUAL_PATH . '/index.php');
 		$this->assertResponse(200);
 
-    $this->clickSubmit("about.php");
-    $this->assertText("Pay calculator for agency billable hours");
+    		$this->clickSubmit("about.php");
+		$this->assertText("Pay calculator for agency billable hours");
 	}
 	
 
