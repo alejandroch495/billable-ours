@@ -1,5 +1,5 @@
 <?php
-//hours_test.php
+//zero_hours_test.php
 include_once 'includes/settings.php';
 require_once 'simpletest/autorun.php';
 require_once 'simpletest/web_tester.php';
